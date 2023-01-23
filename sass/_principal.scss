@@ -1,13 +1,46 @@
 .header {
     width: 100%;
     height: 90vh;
-    @include imagenFondo('../../images/mobile/image-hero.jpg');
     color: $White;
     position: relative;
+    @include imagenFondo('../../images/mobile/image-hero.jpg');
 
+    &__section{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: $Black;
+        z-index: 2;
+    }
+    &__section--iconLogo{
+        position: absolute;
+        left:2rem;
+        top: 2.5rem;
+    }
+    &__section--iconCerrar{
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+        @include spanFondo('../../images/icon-close.svg');
+    }
+    &__section--menuLista{
+        position: absolute;
+        top: 15rem;
+        left: 2rem;
+        list-style: none;
+    }
+    &__section--menuLista li {
+        margin-bottom: 2rem;
+    }
+    &__section--menuLista a{
+        text-decoration: none;
+        color: $White;
+        @include fuente($fuente2, 3rem, 100);
+    }
     &__nav {
-        @include agregarFlex;
         padding: 40px 20px;
+        @include agregarFlex;
     }
 
     &__nav--iconLogo {
@@ -25,18 +58,168 @@
     }
 
     &__title {
-        width: 27rem;
+        width: 28rem;
         height: 17rem;
         border: 1px solid $White;
         position: absolute;
         top: calc(50% - 8rem);
-        left: calc(50% - 13.5rem);
-        padding: 1rem 5rem 0 2rem;
+        left: calc(50% - 14rem);
+        padding: 2rem 0;
+        text-align: center;
         text-transform: uppercase;
-        letter-spacing: 3px;
+        letter-spacing: .5rem;
         line-height: 4rem;
         @include fuente($fuente2, 1.2rem, 100);
     }
+}
+
+.main {
+    flex-direction: column;
+    margin: 8rem 0;
+    @include agregarFlex;
+
+    &__img {
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 2rem;
+        @include fuente($fuente2, 3rem, 300);
+    }
+    &__text{
+        padding: 0 2rem;
+        text-align: center;
+        color: $VeryDarkGray;
+        @include fuente($fuente2, 1.8rem, 300);
+    }
+}
+
+.creaciones{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 11rem;
+    gap: 1rem;
+    &__title{
+        color: $Black;
+        text-align: center;
+        align-self: center;
+        @include fuente($fuente1, 3rem, 400);
+    }
+    &__box{
+        width: 90%;
+        height: 10rem;
+        justify-self: center;
+        color: $White;
+        position: relative;
+        @include fuente($fuente2, 1.8rem, 400);
+        @include agregarFlex;
+    }
+    &__box::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba($Black, .2);
+    }
+    &__DeepEarth{
+        @include imagenFondo('../../images/mobile/image-deep-earth.jpg')
+    }
+    &__NightArcade{
+        @include imagenFondo('../../images/mobile/image-night-arcade.jpg')
+    }
+    &__SoccerTeam{
+        @include imagenFondo('../../images/mobile/image-soccer-team.jpg')
+    }
+    &__TheGrid{
+        @include imagenFondo('../../images/mobile/image-grid.jpg')
+    }
+    &__FromAboveVr{
+        @include imagenFondo('../../images/mobile/image-from-above.jpg')
+    }
+    &__PocketBorealis{
+        @include imagenFondo('../../images/mobile/image-pocket-borealis.jpg')
+    }
+    &__TheCuriosity{
+        @include imagenFondo('../../images/mobile/image-curiosity.jpg')
+    }
+    &__MakeItFisheye{
+        @include imagenFondo('../../images/mobile/image-fisheye.jpg')
+    }
+    &__button{
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0;
+    }
+    &__button::after{
+        background-color: transparent;
+    }
+    &__button--editar{
+        background-color: $White;
+        padding: 1rem 5rem;
+        border: 1px solid $Black;
+        outline: none;
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+        cursor: pointer;
+    }
+}
+
+.footer{
+    background-color: $Black;
+    color: $White;
+    flex-direction: column;
+    font-size: 1.8rem;
+    @include agregarFlex;
+    &__lista--logoContainer{
+        margin-top: 2rem;
+        width: 120px;
+        height: 30px;
+        @include imagenFondo('../../images/logo.svg');
+        background-size: contain;
+    }
+    &__lista--links{
+        margin: 2rem 0;
+    }
+    &__lista--links li{
+        list-style: none;
+        text-align: center;
+        margin: 1rem 0;
+    }
+    &__lista--links a{
+        text-decoration: none;
+        color: $White;
+        cursor: pointer;
+    }
+    &__social--redes{
+        margin: 1rem 0;
+        @include agregarFlex;
+        justify-content: center;
+    }
+    &__social--facebook{
+        @include spanFondo('../../images/icon-facebook.svg');
+        margin-left: 1rem;
+    }
+    &__social--twitter{
+        @include spanFondo('../../images/icon-twitter.svg');
+        margin-left: 1rem;
+    }
+    &__social--instagram{
+        @include spanFondo('../../images/icon-instagram.svg');
+        margin-left: 1rem;
+    }
+    &__social--otro{
+        @include spanFondo('../../images/icon-pinterest.svg');
+        margin-left: 1rem;
+    }
+    &__social--derechos{
+        text-align: center;
+        margin: 2rem 0;
+    }
+   
 }
 
 

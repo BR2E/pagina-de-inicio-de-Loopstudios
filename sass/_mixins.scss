@@ -16,3 +16,13 @@
     font-size: $tamano;
     font-weight: $weight;
 }
+
+@mixin spanFondo($url){
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url($url);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

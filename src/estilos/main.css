@@ -1,18 +1,59 @@
 .header {
   width: 100%;
   height: 90vh;
+  color: hsl(0deg, 0%, 100%);
+  position: relative;
   background-image: url("../../images/mobile/image-hero.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.header__section {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(0deg, 0%, 0%);
+  z-index: 2;
+}
+.header__section--iconLogo {
+  position: absolute;
+  left: 2rem;
+  top: 2.5rem;
+}
+.header__section--iconCerrar {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url("../../images/icon-close.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header__section--menuLista {
+  position: absolute;
+  top: 15rem;
+  left: 2rem;
+  list-style: none;
+}
+.header__section--menuLista li {
+  margin-bottom: 2rem;
+}
+.header__section--menuLista a {
+  text-decoration: none;
   color: hsl(0deg, 0%, 100%);
-  position: relative;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 100;
 }
 .header__nav {
+  padding: 40px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 20px;
 }
 .header__nav--iconLogo {
   display: inline-block;
@@ -33,19 +74,233 @@
   background-size: cover;
 }
 .header__title {
-  width: 27rem;
+  width: 28rem;
   height: 17rem;
   border: 1px solid hsl(0deg, 0%, 100%);
   position: absolute;
   top: calc(50% - 8rem);
-  left: calc(50% - 13.5rem);
-  padding: 1rem 5rem 0 2rem;
+  left: calc(50% - 14rem);
+  padding: 2rem 0;
+  text-align: center;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 0.5rem;
   line-height: 4rem;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.2rem;
   font-weight: 100;
+}
+
+.main {
+  flex-direction: column;
+  margin: 8rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main__img {
+  width: 90%;
+  margin-bottom: 2rem;
+}
+.main__title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+}
+.main__text {
+  padding: 0 2rem;
+  text-align: center;
+  color: hsl(0deg, 0%, 41%);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.creaciones {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 11rem;
+  gap: 1rem;
+}
+.creaciones__title {
+  color: hsl(0deg, 0%, 0%);
+  text-align: center;
+  align-self: center;
+  font-family: "Alata", sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+}
+.creaciones__box {
+  width: 90%;
+  height: 10rem;
+  justify-self: center;
+  color: hsl(0deg, 0%, 100%);
+  position: relative;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.creaciones__box::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.creaciones__DeepEarth {
+  background-image: url("../../images/mobile/image-deep-earth.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.creaciones__NightArcade {
+  background-image: url("../../images/mobile/image-night-arcade.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.creaciones__SoccerTeam {
+  background-image: url("../../images/mobile/image-soccer-team.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.creaciones__TheGrid {
+  background-image: url("../../images/mobile/image-grid.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.creaciones__FromAboveVr {
+  background-image: url("../../images/mobile/image-from-above.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.creaciones__PocketBorealis {
+  background-image: url("../../images/mobile/image-pocket-borealis.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.creaciones__TheCuriosity {
+  background-image: url("../../images/mobile/image-curiosity.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.creaciones__MakeItFisheye {
+  background-image: url("../../images/mobile/image-fisheye.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.creaciones__button {
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+}
+.creaciones__button::after {
+  background-color: transparent;
+}
+.creaciones__button--editar {
+  background-color: hsl(0deg, 0%, 100%);
+  padding: 1rem 5rem;
+  border: 1px solid hsl(0deg, 0%, 0%);
+  outline: none;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: hsl(0deg, 0%, 0%);
+  color: hsl(0deg, 0%, 100%);
+  flex-direction: column;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__lista--logoContainer {
+  margin-top: 2rem;
+  width: 120px;
+  height: 30px;
+  background-image: url("../../images/logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: contain;
+}
+.footer__lista--links {
+  margin: 2rem 0;
+}
+.footer__lista--links li {
+  list-style: none;
+  text-align: center;
+  margin: 1rem 0;
+}
+.footer__lista--links a {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+}
+.footer__social--redes {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+.footer__social--facebook {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url("../../images/icon-facebook.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 1rem;
+}
+.footer__social--twitter {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url("../../images/icon-twitter.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 1rem;
+}
+.footer__social--instagram {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url("../../images/icon-instagram.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 1rem;
+}
+.footer__social--otro {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url("../../images/icon-pinterest.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 1rem;
+}
+.footer__social--derechos {
+  text-align: center;
+  margin: 2rem 0;
 }
 
 .inactive {
