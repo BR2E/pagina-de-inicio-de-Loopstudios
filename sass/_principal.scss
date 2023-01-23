@@ -1,0 +1,46 @@
+.header {
+    width: 100%;
+    height: 90vh;
+    @include imagenFondo('../../images/mobile/image-hero.jpg');
+    color: $White;
+    position: relative;
+
+    &__nav {
+        @include agregarFlex;
+        padding: 40px 20px;
+    }
+
+    &__nav--iconLogo {
+        display: inline-block;
+        width: 120px;
+        height: 20px;
+        @include imagenFondo('../../images/logo.svg');
+    }
+
+    &__nav--iconMenu {
+        display: inline-block;
+        width: 25px;
+        height: 20px;
+        @include imagenFondo('../../images/icon-hamburger.svg');
+    }
+
+    &__title {
+        width: 27rem;
+        height: 17rem;
+        border: 1px solid $White;
+        position: absolute;
+        top: calc(50% - 8rem);
+        left: calc(50% - 13.5rem);
+        padding: 1rem 5rem 0 2rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        line-height: 4rem;
+        @include fuente($fuente2, 1.2rem, 100);
+    }
+}
+
+
+
+.inactive {
+    display: none;
+}

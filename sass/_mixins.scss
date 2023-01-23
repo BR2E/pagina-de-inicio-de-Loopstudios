@@ -1,0 +1,18 @@
+@mixin agregarFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin imagenFondo($url) {
+    background-image: url($url);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin fuente($fuente, $tamano, $weight) {
+    font-family: $fuente;
+    font-size: $tamano;
+    font-weight: $weight;
+}

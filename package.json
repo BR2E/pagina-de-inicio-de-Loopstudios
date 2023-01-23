@@ -1,0 +1,23 @@
+{
+  "name": "pagina-de-inicio-de-loopstudios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test-sass": "sass --watch sass:./src/estilos"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BR2E/pagina-de-inicio-de-Loopstudios.git"
+  },
+  "keywords": [],
+  "author": "Efren Ruiz (BR2E) <Efren.BR2E@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BR2E/pagina-de-inicio-de-Loopstudios/issues"
+  },
+  "homepage": "https://github.com/BR2E/pagina-de-inicio-de-Loopstudios#readme",
+  "devDependencies": {
+    "sass": "^1.57.1"
+  }
+}
