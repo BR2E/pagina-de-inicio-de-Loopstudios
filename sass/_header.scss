@@ -1,0 +1,152 @@
+.header {
+    width: 100%;
+    height: 90vh;
+    color: $White;
+    position: relative;
+    @include imagenFondo('../../images/mobile/image-hero.jpg');
+
+    &__section {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: $Black;
+        z-index: 2;
+    }
+
+    &__section--iconLogo {
+        position: absolute;
+        left: 2rem;
+        top: 2.5rem;
+    }
+
+    &__section--iconCerrar {
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+        @include spanFondo('../../images/icon-close.svg');
+    }
+
+    &__nav--menuLIst {
+        display: none;
+    }
+
+    &__section--menuLista {
+        position: absolute;
+        top: 15rem;
+        left: 2rem;
+        list-style: none;
+    }
+
+    &__section--menuLista li {
+        margin-bottom: 2rem;
+    }
+
+    &__section--menuLista a {
+        text-decoration: none;
+        color: $White;
+        @include fuente($fuente2, 3rem, 100);
+    }
+
+    &__nav {
+        padding: 40px 20px;
+        @include agregarFlex;
+    }
+
+    &__nav--iconLogo {
+        display: inline-block;
+        width: 120px;
+        height: 20px;
+        @include imagenFondo('../../images/logo.svg');
+    }
+
+    &__nav--iconMenu {
+        display: inline-block;
+        width: 25px;
+        height: 20px;
+        @include imagenFondo('../../images/icon-hamburger.svg');
+    }
+
+    &__title {
+        width: 28rem;
+        height: 17rem;
+        border: 1px solid $White;
+        position: absolute;
+        top: calc(50% - 8rem);
+        left: calc(50% - 14rem);
+        padding: 2rem 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+        line-height: 4rem;
+        animation: title 4s linear;
+        @include fuente($fuente2, 1.2rem, 100);
+    }
+}
+
+
+.inactive {
+    display: none;
+}
+
+@media (min-width:1000px) {
+    .header {
+        @include imagenFondo('../../images/desktop/image-hero.jpg');
+
+        &__nav--iconMenu {
+            display: none;
+        }
+
+        &__nav--iconLogo {
+            width: 190px;
+            height: 30px;
+        }
+
+        &__nav--menuLIst {
+            width: 50%;
+            list-style: none;
+            @include agregarFlex;
+        }
+
+        &__nav--menuLIst a {
+            font-size: 1.8rem;
+            color: $White;
+            text-decoration: none;
+        }
+
+        &__nav--menuLIst a:hover {
+            border-bottom: 1px solid $White;
+        }
+
+        &__title {
+            width: 60rem;
+            height: 25rem;
+            top: calc(40% - 8rem);
+            left: 3rem;
+            padding: 2rem 0;
+            text-align: start;
+            letter-spacing: 1rem;
+            line-height: 7rem;
+            font-size: 3rem;
+            @include agregarFlex;
+        }
+    }
+}
+
+
+@keyframes title {
+    0% {
+        opacity: 0;
+        transform: translateX(20rem);
+    }
+
+    50% {
+        opacity: .5;
+        transform: translateX(10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

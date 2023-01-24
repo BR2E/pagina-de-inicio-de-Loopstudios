@@ -1,0 +1,156 @@
+.creaciones {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 11rem;
+    gap: 1rem;
+
+    &__title {
+        color: $Black;
+        text-align: center;
+        align-self: center;
+        @include fuente($fuente1, 3rem, 400);
+    }
+
+    &__box {
+        width: 90%;
+        height: 10rem;
+        justify-self: center;
+        color: $White;
+        position: relative;
+        @include fuente($fuente2, 1.8rem, 400);
+        @include agregarFlex;
+    }
+
+    &__box::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba($Black, .2);
+    }
+
+    &__DeepEarth {
+        @include imagenFondo('../../images/mobile/image-deep-earth.jpg')
+    }
+
+    &__NightArcade {
+        @include imagenFondo('../../images/mobile/image-night-arcade.jpg')
+    }
+
+    &__SoccerTeam {
+        @include imagenFondo('../../images/mobile/image-soccer-team.jpg')
+    }
+
+    &__TheGrid {
+        @include imagenFondo('../../images/mobile/image-grid.jpg')
+    }
+
+    &__FromAboveVr {
+        @include imagenFondo('../../images/mobile/image-from-above.jpg')
+    }
+
+    &__PocketBorealis {
+        @include imagenFondo('../../images/mobile/image-pocket-borealis.jpg')
+    }
+
+    &__TheCuriosity {
+        @include imagenFondo('../../images/mobile/image-curiosity.jpg')
+    }
+
+    &__MakeItFisheye {
+        @include imagenFondo('../../images/mobile/image-fisheye.jpg')
+    }
+
+    &__button {
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0;
+    }
+
+    &__button::after {
+        background-color: transparent;
+    }
+
+    &__button--editar {
+        background-color: $White;
+        padding: 1rem 5rem;
+        border: 1px solid $Black;
+        outline: none;
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+        cursor: pointer;
+    }
+}
+
+
+@media (min-width:1000px) {
+    .creaciones {
+        display: grid;
+        grid-template-columns: repeat(4, 250px);
+        grid-template-rows: 10rem 400px 400px;
+        justify-content: center;
+        margin-bottom: 5rem;
+
+        &__title {
+            grid-area: 1/1/1/3;
+        }
+
+        &__button {
+            grid-area: 1/3/1/5;
+        }
+        &__box{
+            justify-self: flex-end;
+            align-self: center;
+        }
+
+        &__DeepEarth {
+            grid-area: 2/1/3/2;
+            height: 100%;
+            @include imagenFondo('../../images/desktop/image-deep-earth.jpg');
+        }
+
+        &__NightArcade {
+            @include imagenFondo('../../images/desktop/image-night-arcade.jpg');
+            height: 100%;
+        }
+
+        &__SoccerTeam {
+            @include imagenFondo('../../images/desktop/image-soccer-team.jpg');
+            height: 100%;
+        }
+
+        &__TheGrid {
+            @include imagenFondo('../../images/desktop/image-grid.jpg');
+            height: 100%;
+        }
+
+        &__FromAboveVr {
+            @include imagenFondo('../../images/desktop/image-from-above.jpg');
+            height: 100%;
+        }
+
+        &__PocketBorealis {
+            @include imagenFondo('../../images/desktop/image-pocket-borealis.jpg');
+            height: 100%;
+        }
+
+        &__TheCuriosity {
+            @include imagenFondo('../../images/desktop/image-curiosity.jpg');
+            height: 100%;
+        }
+
+        &__MakeItFisheye {
+            @include imagenFondo('../../images/desktop/image-fisheye.jpg');
+            height: 100%;
+        }
+
+    }
+    h3{
+        width: 100%;
+        text-align: center;
+        align-self: flex-end;
+        padding-bottom: 2rem;
+    }
+}

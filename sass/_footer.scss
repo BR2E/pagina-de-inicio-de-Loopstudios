@@ -1,0 +1,63 @@
+.footer {
+    background-color: $Black;
+    color: $White;
+    flex-direction: column;
+    font-size: 1.8rem;
+    @include agregarFlex;
+
+    &__lista--logoContainer {
+        margin-top: 2rem;
+        width: 120px;
+        height: 30px;
+        @include imagenFondo('../../images/logo.svg');
+        background-size: contain;
+    }
+
+    &__lista--links {
+        margin: 2rem 0;
+    }
+
+    &__lista--links li {
+        list-style: none;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    &__lista--links a {
+        text-decoration: none;
+        color: $White;
+        cursor: pointer;
+    }
+
+    &__social--redes {
+        margin: 1rem 0;
+        @include agregarFlex;
+        justify-content: center;
+    }
+
+    &__social--facebook {
+        @include spanFondo('../../images/icon-facebook.svg');
+        margin-left: 1rem;
+    }
+
+    &__social--twitter {
+        @include spanFondo('../../images/icon-twitter.svg');
+        margin-left: 1rem;
+    }
+
+    &__social--instagram {
+        @include spanFondo('../../images/icon-instagram.svg');
+        margin-left: 1rem;
+    }
+
+    &__social--otro {
+        @include spanFondo('../../images/icon-pinterest.svg');
+        margin-left: 1rem;
+    }
+
+    &__social--derechos {
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+}
