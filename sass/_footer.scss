@@ -61,3 +61,17 @@
     }
 
 }
+
+
+@media (min-width:1000px) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-evenly;
+        &__lista--links ul{
+            display: flex;
+        }
+        &__lista--links li{
+            padding-right: 2rem;
+        }
+    }
+}

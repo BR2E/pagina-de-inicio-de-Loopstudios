@@ -155,15 +155,15 @@ html {
 @keyframes title {
   0% {
     opacity: 0;
-    transform: translateX(20rem);
+    transform: translatey(20rem);
   }
   50% {
     opacity: 0.5;
-    transform: translateX(10rem);
+    transform: translatey(10rem);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translatey(0);
   }
 }
 .main {
@@ -172,6 +172,10 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.main__imgContainer {
+  display: flex;
+  justify-content: center;
 }
 .main__img {
   width: 90%;
@@ -491,6 +495,19 @@ html {
 .footer__social--derechos {
   text-align: center;
   margin: 2rem 0;
+}
+
+@media (min-width: 1000px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .footer__lista--links ul {
+    display: flex;
+  }
+  .footer__lista--links li {
+    padding-right: 2rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
