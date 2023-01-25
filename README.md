@@ -24,6 +24,6 @@ Este es un desafío de la plataforma Frontend Mentor, el ejercicio consiste en c
 ![](./design/imgPc2.png)
 ![](./design/imgPc3.png)
 ![](./design/movil1.png)
-![](./design/imgPc2.png)
-![](./design/imgPc3.png)
+![](./design/movil2.png)
+![](./design/movil3.png)
 ![](./design/mobile-menu.jpg)
